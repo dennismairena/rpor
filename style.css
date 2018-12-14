@@ -1,0 +1,162 @@
+@font-face {
+font-family: 'Edwardian Scr Alt ITC TT';
+font-style: normal;
+font-weight: normal;
+src: local('Edwardian Scr Alt ITC TT'), url('Edwardian Scr Alt ITC TT.woff') format('woff');
+}
+
+header{
+
+      min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0,1), transparent), url(https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/36176761_778118422381877_1571448690164367360_n.jpg?_nc_cat=104&_nc_ht=scontent-lax3-1.xx&oh=30e510ca0570ff519a8d6ea8bebe9f97&oe=5CAA3D01) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+body{align-items:center;justify-content:center;font:14px/1.5 'Open Sans',sans-serif;color:#345;background:#f0f2f4;padding: 0;margin:0;}
+
+header>div{position: absolute;
+width: 100%;
+padding-top: 9em;}
+
+#logo{font-family: 'Edwardian Scr Alt ITC TT';
+font-size: 6em;
+color:#b5b7b9;
+font-weight: normal;
+text-align: center;
+width: 100%;
+top:.35em;
+position: relative;
+line-height: 0%;}
+
+.plogo{font-size: 2em;
+color:white;
+font-weight: normal;
+text-align: center;
+top:0em;
+position: relative;}
+
+.plogo>span{font-size:1.1em;}
+  .button {
+  background-color:transparent;
+border: solid white 2px;
+color: white;
+padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: .4em;
+  margin-top: 1em;}
+
+.button:hover
+{
+  background-color:white;
+  border: none;
+  color: gray;
+  
+}
+
+main {
+  max-width: 100%;
+  padding: 40px;
+  border: 1px solid rgba(0,0,0,.2);
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.titulos{font-family: 'Edwardian Scr Alt ITC TT';
+font-size: 5em;
+color:#b5b7b9;
+font-weight: normal;
+text-align: center;
+width: 100%;
+top:.35em;
+position: relative;
+line-height: 10%;}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #abc;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #abc;
+  border: 1px solid transparent;
+  border-radius: 1em 1em 0 0;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+
+}
+
+label[for*='1']:before { content: '\f1cb'; }
+label[for*='2']:before { content: '\f17d'; }
+label[for*='3']:before { content: '\f16c'; }
+label[for*='4']:before { content: '\f171'; }
+
+label:hover {
+  color: #789;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #a53139;
+  border: 1px solid #abc;
+  border-top: 2px solid #a53139;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+.precios{
+position: relative;
+float: right;
+padding-right: .5em;
+font-size: 1.5em;}
+.platillos{max-width: 100%;
+	background: rgba(0, 0, 0, 0.01);
+box-shadow: 0 8px 6px -6px gray;
+padding-bottom: .5em;
+display: inline-block;
+margin: 1em}
+.platillos>img{max-width: 100%;}
+.platillos>p>strong{font-size:1.2em;
+color:black;}
+
+@media only screen and (min-width: 700px) {
+    .platillos{max-width:45%;}
+.button{font-size: 1em;}
+  #logo{font-size: 9em;}
+header>div{top:1em;}
+}
+
+@media only screen and (min-width: 1024px) {
+    .platillos{max-width:30%;}
+.button{font-size: 1em;}
+  #logo{font-size: 11em;}
+header>div{top:1em;}
+}
+
+
+
