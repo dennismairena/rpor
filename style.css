@@ -216,10 +216,11 @@ font-size: 1.5em;}
 box-shadow: 0 8px 6px -6px gray;
 padding-bottom: .5em;
 display: inline-block;
-margin: 1em}
+margin: 1em;
+border-radius:.5em;}
 .platillos>img{max-width: 100%;}
 .platillos>p>strong{font-size:1.2em;
-color:black;}
+color:gray;}
 .platillos>p{margin: 1em;}
 @media only screen and (min-width: 700px) {
   .menu{width: 48%;}
