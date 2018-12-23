@@ -147,7 +147,7 @@ section {
 input {
   display: none;
 }
-
+[type='checkbox'] + label, [type='radio'] + label{margin: 0;}
 label {
   display: inline-block;
   margin: 0 0 -1px;
