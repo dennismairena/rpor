@@ -31,69 +31,6 @@ src: local('Edwardian Scr Alt ITC TT'), url('Edwardian Scr Alt ITC TT.woff') for
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*comentarios*/
-article {
-  margin: 20px auto;
-  width: 100%;
-  padding: 1em;
-  font-family: sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-  color:rgba(0,0,0,0.6);
-}
-
-
-.quote {
-  background:white;
-  padding: 15px 20px 5px 15px;
-  border-radius: 5px;
-  margin-bottom: 30px;
-}
-
-.quote:after {
-  content: '';
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 18px 0 18px;
-  border-color: white transparent transparent transparent;
-  position: relative;
-  top: 37px;
-  left: 20px;
-}
-
-.student {
-  margin-left: 25px;
-  margin-bottom: 80px;
-}
-
-.student .photo {
-  background-image: url("https://s3-media2.fl.yelpcdn.com/photo/nnQFWEA4T4bib3f0MwID0Q/90s.jpg");
-  background-color: #ccc;
-  border-radius: 100px;
-  width: 60px;
-  height: 60px;
-  float: left;
-  margin-right: 10px;
-}
-
-.student p {
-  position: relative;
-  top: 5px;
-  text-transform: uppercase;
-}
-
-.student p:nth-child(2) {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.student p:nth-child(3) {
-  font-size: 14px;
-  color: #777;
-}
-/*fin comentarios*/
 
 /*header*/
 header{
@@ -153,7 +90,19 @@ padding: 5px 22px;
 
 
 /*fin header*/
-
+.menu{width: 100%;
+margin:.5%;
+display: inline-block;
+padding:1em;}
+.menu{color: darkgray;}
+.menu>span{float:right;
+font-size: 1.4em;
+color:#615e5e}
+.menu>strong{font-size: 1.5em;
+color:#615e5e}
+#extra{display: none;}
+.extra{border-bottom: dotted #d8d8d8;}
+.extra>p{font-size: 10px;}
 /*about*/
 #about{display: inline-block;}
 #about>img{margin: 0 auto;
@@ -261,7 +210,7 @@ float: right;
 padding-right: .5em;
 font-size: 1.5em;}
 .platillos{max-width: 100%;
-	background: rgba(0, 0, 0, 0.01);
+	background: #5f5e5e08;
 box-shadow: 0 8px 6px -6px gray;
 padding-bottom: .5em;
 display: inline-block;
@@ -269,9 +218,12 @@ margin: 1em}
 .platillos>img{max-width: 100%;}
 .platillos>p>strong{font-size:1.2em;
 color:black;}
-
+.platillos>p{margin: 1em;}
 @media only screen and (min-width: 700px) {
-    .platillos{max-width:45%;}
+  .menu{width: 48%;}
+
+    .platillos{max-width:45%;
+     }
 .button{font-size: 1em;}
   #logo{font-size: 9em;}
 .titulos{font-size: 5em;}
