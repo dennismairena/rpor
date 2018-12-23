@@ -204,7 +204,18 @@ text-align: center;
 width: 100%;
 top:.35em;
 }
+.pega>a{background:white;
+padding:1em;
+border-radius: 0 0 1em 1em;
 
+  position: relative;
+    left:5px; }
+.pega{
+width: 100%;
+  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;}
 
 .precios{
 position: relative;
