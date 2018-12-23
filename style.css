@@ -122,7 +122,9 @@ padding: 1em;
 width: 90%;
 margin: 0 auto;}
 
-
+.reco{overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;}
 
 
 main {
