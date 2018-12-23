@@ -4,6 +4,33 @@ font-style: normal;
 font-weight: normal;
 src: local('Edwardian Scr Alt ITC TT'), url('Edwardian Scr Alt ITC TT.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?5et2pi');
+  src:  url('fonts/icomoon.eot?5et2pi#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5et2pi') format('truetype'),
+    url('fonts/icomoon.woff?5et2pi') format('woff'),
+    url('fonts/icomoon.svg?5et2pi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /*comentarios*/
 article {
   margin: 20px auto;
@@ -151,7 +178,8 @@ margin: 0 auto;}
 
 main {
   max-width: 100%;
-  padding: 40px;
+  margin-top:1em;
+  padding: 5px;
   border: 1px solid rgba(0,0,0,.2);
   background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,.1);
@@ -182,16 +210,16 @@ label {
 }
 
 label:before {
-  font-family: fontawesome;
+  font-family: icomoon;
   font-weight: normal;
   margin-right:10px;
 font-size: 16px;
 }
 
-label[for*='1']:before { content: '\f1cb'; }
-label[for*='2']:before { content: '\f17d'; }
-label[for*='3']:before { content: '\f16c'; }
-label[for*='4']:before { content: '\f171'; }
+label[for*='1']:before { content: '\e9a3'; }
+label[for*='2']:before { content: "\e904"; }
+label[for*='3']:before { content: '\e901'; }
+label[for*='4']:before { content: '\e544'; }
 
 label:hover {
   color: #789;
