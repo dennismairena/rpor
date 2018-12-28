@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.19-pr16">
+
+    
+  <!-- Spot Style - Load panorama -->
+
+
+  <style name="IconLoadpanorama"
+         url="%FIRSTXML%/spots/pin_3d_hole_user_defaultpoint51.png"
+         visible="false"
+         edge="center"
+         onhover="onhoverIconLoadpanorama"
+         onout="onoutIconLoadpanorama"
+
+         height="40"
+         width="25"
+         />
+  <action name="onhoverIconLoadpanorama">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconLoadpanorama">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+  <!-- unsupported kind of display : PointMap -->
+
+
+<!-- ********** -->
+<!-- Logo1 -->
+<!-- id : logo1 -->
+<!-- ********** -->
+
+
+
+
+
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+
+</krpano>
