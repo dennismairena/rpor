@@ -6,6 +6,32 @@
 
 
   <style name="IconLoadpanorama"
+         url="%FIRSTXML%/spots/pin_2d_thick_user_defaultpoint5.png"
+         visible="false"
+         edge="center"
+         onhover="onhoverIconLoadpanorama"
+         onout="onoutIconLoadpanorama"
+
+         height="40"
+         width="10"
+         />
+  <action name="onhoverIconLoadpanorama">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconLoadpanorama">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Load panorama -->
+
+
+  <style name="IconLoadpanorama"
          url="%FIRSTXML%/spots/pin_3d_hole_user_defaultpoint51.png"
          visible="false"
          edge="center"
