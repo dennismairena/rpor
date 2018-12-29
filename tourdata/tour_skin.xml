@@ -6,40 +6,14 @@
 
 
   <style name="IconLoadpanorama"
-         url="%FIRSTXML%/spots/pin_2d_thick_user_defaultpoint5.png"
+         url="%FIRSTXML%/spots/pin_thin_3d_user_defaultpoint51.png"
          visible="false"
          edge="center"
          onhover="onhoverIconLoadpanorama"
          onout="onoutIconLoadpanorama"
 
          height="40"
-         width="10"
-         />
-  <action name="onhoverIconLoadpanorama">
-    showtooltip('hotspot');
-  </action>
-  <action name="onoutIconLoadpanorama">
-    hideTooltip();
-
-
-
-  </action>
-
-
-
-    
-  <!-- Spot Style - Load panorama -->
-
-
-  <style name="IconLoadpanorama"
-         url="%FIRSTXML%/spots/pin_3d_hole_user_defaultpoint51.png"
-         visible="false"
-         edge="center"
-         onhover="onhoverIconLoadpanorama"
-         onout="onoutIconLoadpanorama"
-
-         height="40"
-         width="25"
+         width="50"
          />
   <action name="onhoverIconLoadpanorama">
     showtooltip('hotspot');
@@ -557,10 +531,10 @@ set(layer[SansControlBarbtn_home].visible, true);
 <!-- ********** -->
 
 
-  <layer align="top"
+  <layer align="topleft"
          x="10"
          y="10"
-         zorder="3"
+         zorder="4"
          name="logo1"
          keep="true"
          visible="false"
@@ -570,9 +544,7 @@ set(layer[SansControlBarbtn_home].visible, true);
 			onhover="showTooltip('plugin');"
 			onout="hideTooltip();"
          url="%FIRSTXML%/graphics/logo1/logotransparentbackround.jpg" 
-         onclick="
-getmessage(urltoopen,logo1websiteurl);openurl(get(urltoopen),_blank);
-"
+         handcursor="false"
 
          height="70"
          width="200"
@@ -594,17 +566,201 @@ getmessage(urltoopen,logo1websiteurl);openurl(get(urltoopen),_blank);
 
 
 
-  <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
-  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+<!-- ********** -->
+<!-- Description -->
+<!-- id : description -->
+<!-- ********** -->
 
-  
-  <events name="krpanoExitFullscreenEvent"
-    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
-    keep="true" />
+<ptplugin name="description" canStart="false" newPano="false" openatstart="false" mode="panorama" startMethod="showDescription_description" engine="kolorArea">
+	<settings>
+		<option name="position" value="topleft" type="string" />
+		<option name="start_position" value="left" type="string" />
+		<option name="margin_x" value="0" type="int" />
+		<option name="margin_y" value="0" type="int" />
+		<option name="background_color" value="f2f2f2" type="string" />
+		<option name="background_alpha" value="1" type="float" />
+		<option name="topleft_radius" value="0" type="int" />
+		<option name="topright_radius" value="0" type="int" />
+		<option name="bottomleft_radius" value="0" type="int" />
+		<option name="bottomright_radius" value="0" type="int" />
+		<option name="area_border_width" value="0" type="int" />
+		<option name="area_border_color" value="f2f2f2" type="string" />
+		<option name="area_border_alpha" value="1" type="float" />
+		<option name="padding" value="15" type="int" />
+		<option name="display_title" value="false" type="bool" />
+		<option name="close_displayed" value="false" type="bool" />
+		<option name="close_text" value="descriptiondisplay_close_text" type="string" />
 
-  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+		<option name="overlay_displayed" value="false" type="bool" />
+		<option name="overlay_color" value="000000" type="string" />
+		<option name="overlay_alpha" value="0.50000762951094835" type="float" />
+
+		<option name="area_width" value="20" type="int" />
+		<option name="area_height" value="100" type="int" />
+		<option name="area_width_unit" value="percent" type="string" />
+		<option name="area_height_unit" value="percent" type="string" />
+		<option name="animation" value="false" type="bool" />
+		<option name="animation_duration" value="500" type="int" />
+		<option name="refresh_content" value="true" type="bool" />
+		<option name="close_callback" value="invokeKrFunction('closeKolorAreaCallback_description')" type="string" />
+		<option name="close_on_click" value="false" type="bool" />
+		<option name="zorder" value="5" type="int" />
+		<option name="use_i18n" value="true" type="bool" />
+	</settings>
+</ptplugin>
+
+<action name="kolorAreaJsReady_description">
+	set(ptplugin[description].jsready, true);
+
+</action>
+
+
+<action name="openKolorArea_description">
+	ifnot(ptplugin[description].isOpen,
+		set(ptplugin[description].isOpen, true);
+		
+		js(showKolorArea(description, get(ptplugin[description].descID)));
+		events.dispatch(onremovedisplayedobject);
+	);
+</action>
+
+<action name="closeKolorArea_description">
+	if(ptplugin[description].isOpen,
+		js(invokePluginFunction(description, closeKolorArea));
+	);
+</action>
+
+<action name="toggleKolorArea_description">
+	if(ptplugin[description].isOpen,
+		closeKolorArea_description();
+	,
+		openKolorArea_description();
+	);
+</action>
+
+<action name="closeKolorAreaCallback_description">
+	set(ptplugin[description].isOpen, false);
+	if(tour_displayinfo,hideTourInfo();
+
+	);
+</action>
+
+
+
+<action name="showKolorArea_description">
+	ifnot(ptplugin[description].startMethod == "",
+		delayedcall(0,get(ptplugin[description].startMethod));
+	,
+		set(ptplugin[description].isOpen, true);
+		
+		js(invokePluginFunction(description, showKolorArea, %1));
+		events.dispatch(onremovedisplayedobject);
+	);
+</action>
+	
+<action name="hideKolorArea_description">
+	
+	set(ptplugin[description].isOpen, false);
+	js(invokePluginFunction(description, hideKolorArea, %1));
+</action>
+
+<action name="openDescription_description">
+	openKolorArea_description();
+</action>
+
+<action name="openSpotDescription_description">
+	set(ptplugin[description].descID, %1);
+	openKolorArea_description();
+</action>
+
+<action name="closeDescription_description">
+	set(ptplugin[description].currentGroup, false);
+	if(%1,
+		set(restore_description, true);
+	,
+		set(restore_description, false);
+	);
+	closeKolorArea_description();
+</action> 
+
+<action name="showDescription_description">
+	if(ptplugin[description].canStart,
+		set(ptplugin[description].descID, get(scene[get(xml.scene)].descriptionid));
+		if(ptplugin[description].descID == null,
+			set(ptplugin[description].descID, "");
+		);
+		if(ptplugin[description].descID != "",
+			openDescription_description();
+		,
+			hideKolorArea_description(false);
+		);
+		set(ptplugin[description].startMethod, "");
+	);
+</action>
+
+
+<action name="refreshPanoDescription_description">
+	set(ptplugin[description].descID, get(scene[get(xml.scene)].descriptionid));
+	if(ptplugin[description].descID == null,
+		set(ptplugin[description].descID, "");
+	);
+	if(ptplugin[description].descID != "",
+		if(ptplugin[description].isOpen,
+			js(invokePluginFunction(description, updateKolorArea, get(ptplugin[description].descID)));
+		,
+			if(restore_description,
+				showDescription_description();
+			);
+		);
+	,
+		if(tour_displayinfo,
+			delayedcall(0.1,showTourInfo();
+);
+		);
+		closeDescription_description(get(ptplugin[description].isOpen));
+	);
+</action>
+
+<action name="onNewPano_description">
+	if(ptplugin[description].newPano,
+		if(ptplugin[description].startMethod == "",
+			if(ptplugin[description].isOpen,
+				refreshPanoDescription_description();
+			,
+				if(tour_displayinfo,
+				showDescription_description();
+				,
+				refreshPanoDescription_description();
+				);
+			);
+		);
+	);
+	set(ptplugin[description].newPano, true);
+</action>
+
+<action name="changeLanguage_description">
+	if(ptplugin[description].jsready,
+		stopdelayedcall(delay_description);
+		js(invokePluginFunction(description, changeLanguage, true));
+	,
+		delayedcall(delay_description, 0.1, changeLanguage_description(););
+	);
+</action>
+
+<events name="kolorAreaEvents_description" 
+	keep="true"
+	onTourStart="set(ptplugin[description].canStart, true);if(ptplugin[description].openatstart,showTourInfo();
+);"
+	onshowtourinfo="if(tour_displayinfo,showDescription_description(););"
+	onhidetourinfo="if(ptplugin[description].isOpen,closeDescription_description(false););"
+	onnewpano="onNewPano_description();"
+	changetourlanguage="changeLanguage_description();"
+/>
+
+  <!-- Tour Information -->
+  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
+  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
+
 
 	<!-- WebVR plugin for VR availability tests -->
 
@@ -633,4 +789,21 @@ getmessage(urltoopen,logo1websiteurl);openurl(get(urltoopen),_blank);
 		set(tour_vrdevices, false);
 		events.dispatch(onvrunavailable);
 	</action>
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
+
 </krpano>

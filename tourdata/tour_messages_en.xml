@@ -10,22 +10,22 @@
 
 
 
-  <data name="en_pano138_title"><![CDATA[restaurant]]></data>
-  <data name="en_spotpoint141_tooltip"><![CDATA[lobby]]></data>
+  <data name="en_pano138_title"><![CDATA[Restaurant]]></data>
+  <data name="en_spotpoint141_tooltip"><![CDATA[Lobby]]></data>
 
 
-  <data name="en_pano134_title"><![CDATA[lobby]]></data>
-  <data name="en_spotpoint137_tooltip"><![CDATA[parking]]></data>
-  <data name="en_spotpoint147_tooltip"><![CDATA[restaurant]]></data>
+  <data name="en_pano134_title"><![CDATA[Lobby]]></data>
+  <data name="en_spotpoint137_tooltip"><![CDATA[Parking]]></data>
+  <data name="en_spotpoint147_tooltip"><![CDATA[Restaurant]]></data>
 
 
-  <data name="en_pano126_title"><![CDATA[parking]]></data>
-  <data name="en_spotpoint146_tooltip"><![CDATA[lobby]]></data>
+  <data name="en_pano126_title"><![CDATA[Parking]]></data>
+  <data name="en_spotpoint146_tooltip"><![CDATA[Lobby]]></data>
 
 
-	<data name="en_spotmap253_tooltip"><![CDATA[restaurant]]></data>
-	<data name="en_spotmap254_tooltip"><![CDATA[lobby]]></data>
-	<data name="en_spotmap255_tooltip"><![CDATA[parking]]></data>
+	<data name="en_spotmap159_tooltip"><![CDATA[Restaurant]]></data>
+	<data name="en_spotmap160_tooltip"><![CDATA[Lobby]]></data>
+	<data name="en_spotmap161_tooltip"><![CDATA[Parking]]></data>
 
 
 
@@ -40,7 +40,8 @@
   <data name="en_SansControlBarautorotateOffTip"><![CDATA[Stop autorotation]]></data>
   <data name="en_SansControlBarenterVRTip"><![CDATA[VR mode]]></data>
   <data name="en_SansControlBarenterVRNotTip"><![CDATA[VR mode is unavailable]]></data>
-  <data name="en_logo1websiteurl"><![CDATA[http://dennismairena.github.io/rpor]]></data>
+  <data name="en_HomeLogopanoid"><![CDATA[]]></data>
+  <data name="en_logo1websiteurl"><![CDATA[]]></data>
   <data name="en_logo1tooltipText"><![CDATA[Open website]]></data>
 
 

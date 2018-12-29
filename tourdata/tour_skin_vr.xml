@@ -6,40 +6,14 @@
 
 
   <style name="IconLoadpanorama"
-         url="%FIRSTXML%/spots/pin_2d_thick_user_defaultpoint5.png"
+         url="%FIRSTXML%/spots/pin_thin_3d_user_defaultpoint51.png"
          visible="false"
          edge="center"
          onhover="onhoverIconLoadpanorama"
          onout="onoutIconLoadpanorama"
 
          height="40"
-         width="10"
-         />
-  <action name="onhoverIconLoadpanorama">
-    showtooltip('hotspot');
-  </action>
-  <action name="onoutIconLoadpanorama">
-    hideTooltip();
-
-
-
-  </action>
-
-
-
-    
-  <!-- Spot Style - Load panorama -->
-
-
-  <style name="IconLoadpanorama"
-         url="%FIRSTXML%/spots/pin_3d_hole_user_defaultpoint51.png"
-         visible="false"
-         edge="center"
-         onhover="onhoverIconLoadpanorama"
-         onout="onoutIconLoadpanorama"
-
-         height="40"
-         width="25"
+         width="50"
          />
   <action name="onhoverIconLoadpanorama">
     showtooltip('hotspot');
@@ -57,6 +31,46 @@
 
 
 <!-- ********** -->
+<!-- Nadir/Zenith Home Button -->
+<!-- id : HomeLogo -->
+<!-- ********** -->
+
+  <hotspot ath="0" atv="-90"
+         zorder="0"
+         name="HomeLogo"
+         keep="true"
+           vr="true"
+           distorted="true"
+           depth="1000"
+         visible="false"
+         capture="false"
+         enable="true"
+
+         url="%FIRSTXML%/graphics/vr-homelogo/_337517-200.png" 
+         onclick="mainloadscene();"
+
+         height="32"
+         width="32"
+
+         />
+
+  <events name="HomeLogoevents" 
+    onTourStart="showHomeLogo();"
+    keep="true" />
+
+  <action name="hideHomeLogo">
+    set(hotspot[HomeLogo].visible, false);
+  </action>
+  <action name="showHomeLogo">
+      set(hotspot[HomeLogo].visible, true);
+  </action>
+
+
+
+  <events name="HomeLogoshowevents" onremovepano="hideHomeLogo" onPanoStart="showHomeLogo" keep="true"/>
+
+
+<!-- ********** -->
 <!-- Logo1 -->
 <!-- id : logo1 -->
 <!-- ********** -->
@@ -65,9 +79,14 @@
 
 
 
+  <!-- Tour Information -->
+  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
+  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
+
+
   <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
   <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
 
   
@@ -76,5 +95,10 @@
     keep="true" />
 
   <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
 
 </krpano>
