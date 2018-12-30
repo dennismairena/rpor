@@ -30,17 +30,17 @@
 
 
 
+  <data name="en_HomeLogopanoid"><![CDATA[]]></data>
   <data name="en_SansControlBarprevSceneTip"><![CDATA[Previous scene]]></data>
   <data name="en_SansControlBarnextSceneTip"><![CDATA[Next scene]]></data>
   <data name="en_SansControlBarhomeTip"><![CDATA[Home]]></data>
-  <data name="en_SansControlBarwebpageurl"><![CDATA[http://dennismairena.github.io/rpor]]></data>
+  <data name="en_SansControlBarwebpageurl"><![CDATA[index.html]]></data>
   <data name="en_SansControlBaropenFsTip"><![CDATA[Enter fullscreen]]></data>
   <data name="en_SansControlBarcloseFsTip"><![CDATA[Exit fullscreen]]></data>
   <data name="en_SansControlBarautorotateOnTip"><![CDATA[Start autorotation]]></data>
   <data name="en_SansControlBarautorotateOffTip"><![CDATA[Stop autorotation]]></data>
   <data name="en_SansControlBarenterVRTip"><![CDATA[VR mode]]></data>
   <data name="en_SansControlBarenterVRNotTip"><![CDATA[VR mode is unavailable]]></data>
-  <data name="en_HomeLogopanoid"><![CDATA[]]></data>
   <data name="en_logo1websiteurl"><![CDATA[]]></data>
   <data name="en_logo1tooltipText"><![CDATA[Open website]]></data>
 
