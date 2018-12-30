@@ -531,7 +531,7 @@ set(layer[SansControlBarbtn_home].visible, true);
 <!-- ********** -->
 
 
-  <layer align="topleft"
+  <layer align="top"
          x="10"
          y="10"
          zorder="4"
