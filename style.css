@@ -142,7 +142,7 @@ padding: 5px 22px;
   display: inline-block;
   border-radius: .4em;
   margin-top: 1em;
-    
+    min-width: 200px;
     font-size: .7em;}
 
 .button:hover
