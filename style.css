@@ -16,6 +16,71 @@ src: local('Edwardian Scr Alt ITC TT'), url('Edwardian Scr Alt ITC TT.woff') for
   font-style: normal;
 }
 
+/*comentarios*/
+article {
+  margin: 20px auto;
+  width: 100%;
+  padding: 1em;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color:rgba(0,0,0,0.6);
+}
+
+
+.quote {
+  background:white;
+  padding: 15px 20px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.quote:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 18px 0 18px;
+  border-color: white transparent transparent transparent;
+  position: relative;
+  top: 37px;
+  left: 20px;
+}
+
+.student {
+  margin-left: 25px;
+  margin-bottom: 80px;
+}
+
+.student .photo {
+  background-image: url("https://s3-media2.fl.yelpcdn.com/photo/nnQFWEA4T4bib3f0MwID0Q/90s.jpg");
+  background-color: #ccc;
+  border-radius: 100px;
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+
+.student p {
+  position: relative;
+  top: 5px;
+  text-transform: uppercase;
+}
+
+.student p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.student p:nth-child(3) {
+  font-size: 14px;
+  color: #777;
+}
+/*fin comentarios*/
+
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -66,7 +131,7 @@ text-align: center;
 top:2.1em;
 position: relative;}
 
-.plogo>span{font-size:1.1em;}
+.plogo>span{font-size:.9em;}
   .button {
   background-color:transparent;
 border: solid white 2px;
@@ -77,7 +142,7 @@ padding: 5px 22px;
   display: inline-block;
   border-radius: .4em;
   margin-top: 1em;
-    width: 200px;
+    
     font-size: .7em;}
 
 .button:hover
@@ -89,6 +154,8 @@ padding: 5px 22px;
 }
 
 
+footer>p{text-align: center;
+color:gray;}
 /*fin header*/
 .menu{width: 100%;
 margin:.5%;
@@ -100,11 +167,15 @@ font-size: 1.4em;
 color:#615e5e}
 .menu>strong{font-size: 1.5em;
 color:#615e5e}
-#extra{display: none;}
+
 .extra{border-bottom: dotted #d8d8d8;}
 .extra>p{font-size: 10px;}
+.frescos{border-bottom: dotted #d8d8d8;}
+.frescos>p{font-size: 10px;}
 /*about*/
-#about{display: inline-block;}
+#about{display:inline-block;
+
+}
 #about>img{margin: 0 auto;
 width: 90%;
 display:block;
@@ -122,14 +193,15 @@ padding: 1em;
 width: 90%;
 margin: 0 auto;}
 
-.reco{overflow-x: scroll;
+.reco{overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;}
 
 
 main {
-  max-width: 100%;
-  margin-top:1em;
+ 
+  display: block;
+  margin: 1em auto;
   padding: 5px;
   border: 1px solid rgba(0,0,0,.2);
   background: #fff;
@@ -185,7 +257,8 @@ input:checked + label {
   font-size: 16px;
       margin-left: 12px;
     position: relative;
-    top:1px;
+    top:2px;
+    background: white;
 }
 
 #tab1:checked ~ #content1,
@@ -228,11 +301,14 @@ box-shadow: 0 8px 6px -6px gray;
 padding-bottom: .5em;
 display: inline-block;
 margin: 1em;
-border-radius:.5em;}
-.platillos>img{max-width: 100%;}
+border-radius:0em 0em 1em 1em;}
+.platillos>img{max-width: 100%;
+border-radius: 1em 1em 0 0;}
 .platillos>p>strong{font-size:1.2em;
 color:gray;}
 .platillos>p{margin: 1em;}
+
+
 @media only screen and (min-width: 700px) {
   .menu{width: 48%;}
 
@@ -250,10 +326,10 @@ width:80%;
 width: 80%;
 }
 }
-
+#blanquito{color: white;}
 @media only screen and (min-width: 1024px) {
     .platillos{max-width:30%;}
-
+.plogo>span{font-size:1.1em;}
   #logo{font-size: 11em;}
 #about>img{border-radius: 1em;
 width:40%;
