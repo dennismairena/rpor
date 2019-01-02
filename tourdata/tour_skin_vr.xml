@@ -31,46 +31,6 @@
 
 
 <!-- ********** -->
-<!-- Nadir/Zenith Home Button -->
-<!-- id : HomeLogo -->
-<!-- ********** -->
-
-  <hotspot ath="0" atv="-90"
-         zorder="0"
-         name="HomeLogo"
-         keep="true"
-           vr="true"
-           distorted="true"
-           depth="1000"
-         visible="false"
-         capture="false"
-         enable="true"
-
-         url="%FIRSTXML%/graphics/vr-homelogo/_337517-200.png" 
-         onclick="mainloadscene();"
-
-         height="32"
-         width="32"
-
-         />
-
-  <events name="HomeLogoevents" 
-    onTourStart="showHomeLogo();"
-    keep="true" />
-
-  <action name="hideHomeLogo">
-    set(hotspot[HomeLogo].visible, false);
-  </action>
-  <action name="showHomeLogo">
-      set(hotspot[HomeLogo].visible, true);
-  </action>
-
-
-
-  <events name="HomeLogoshowevents" onremovepano="hideHomeLogo" onPanoStart="showHomeLogo" keep="true"/>
-
-
-<!-- ********** -->
 <!-- Logo1 -->
 <!-- id : logo1 -->
 <!-- ********** -->

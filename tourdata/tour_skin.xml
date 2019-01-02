@@ -178,7 +178,7 @@
   <layer name="SansControlBar_menu_bg"
          keep="true"
          type="container"
-         zorder="3"
+         zorder="2"
          width="40"
          height="40"
          align="bottom"
@@ -534,7 +534,7 @@ set(layer[SansControlBarbtn_home].visible, true);
   <layer align="top"
          x="10"
          y="10"
-         zorder="4"
+         zorder="3"
          name="logo1"
          keep="true"
          visible="false"
@@ -604,7 +604,7 @@ set(layer[SansControlBarbtn_home].visible, true);
 		<option name="refresh_content" value="true" type="bool" />
 		<option name="close_callback" value="invokeKrFunction('closeKolorAreaCallback_description')" type="string" />
 		<option name="close_on_click" value="false" type="bool" />
-		<option name="zorder" value="5" type="int" />
+		<option name="zorder" value="4" type="int" />
 		<option name="use_i18n" value="true" type="bool" />
 	</settings>
 </ptplugin>
@@ -762,6 +762,23 @@ set(layer[SansControlBarbtn_home].visible, true);
   <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
 
 
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
+
 	<!-- WebVR plugin for VR availability tests -->
 
 	<plugin name="ptpvrmode" devices="html5" keep="true"
@@ -789,21 +806,4 @@ set(layer[SansControlBarbtn_home].visible, true);
 		set(tour_vrdevices, false);
 		events.dispatch(onvrunavailable);
 	</action>
-  <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
-  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
-
-  
-  <events name="krpanoExitFullscreenEvent"
-    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
-    keep="true" />
-
-  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
-  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
-  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
-  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
-  
-  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
-
 </krpano>
