@@ -149,13 +149,58 @@ padding: 5px 22px;
 {
   background-color:white;
   border: none;
-  color: gray;
+  color: darkgray;
   
 }
-
-
-footer>p{text-align: center;
+.up{text-align: center;}
+.up>a{background:white;
+padding:1em;
+position: relative;
+top:.6em;
+border-radius: 2em;
 color:gray;}
+.burrito{;
+max-width: 510px;
+display: block;
+margin: 0 auto;}
+
+.info{background-color: white;
+}
+.info>div>div{width:100%;
+padding:0 1em;
+display: inline-block;}
+.info:first-child{background: red;}
+.info>div>div>p{text-align: center;}
+
+.infode{text-align: center;
+padding:1em;}
+.infode>a{background: gray;
+padding:.5em;
+margin-top:1em;
+color:white;
+border-radius:.4em;
+margin-left:1em;}
+footer>p{text-align: center;
+color:gray;
+margin-top: 1em;}
+.infode>a:hover{
+background:darkgray;
+}
+#tel:before{font-family: icomoon;
+  content: "\e942";
+  color: white;
+font-size: 12px;}
+  #mail:before{font-family: icomoon;
+  content: "\e906";
+  color: white;
+  font-size: 12px;}
+
+  
+footer>p>a{background: gray;
+border-radius: 4em;
+margin: .4em;
+padding:.7em;
+font-size: 14px;}
 /*fin header*/
 .menu{width: 100%;
 margin:.5%;
@@ -185,7 +230,7 @@ box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 margin-bottom: 1em;}
 
 #about>div>p{width: 100%;
-  text-align: center;}
+  text-align:justify;}
 #about>div{background: white;
 border-radius: 1em;
 display: block;
@@ -231,13 +276,33 @@ label {
   border-radius: .5em .5em 0 0;
   font-size: 0px;
 }
+
+
+.fb:before {
+  font-family: icomoon;
+  content: "\ea90";
+  color: white;
+}
+.yelp:before {
+  font-family: icomoon;
+  content: "\e900";
+  color: white;
+}
+.instagram:before {
+  font-family: icomoon;
+  content: "\e902";
+  color: white;
+}
+.instagram:hover{background: #A135BB;}
+.fb:hover{background: #4267B2;}
+.yelp:hover{background: #D32323;}
 .review:before{ 
   font-family: icomoon;
   font-weight: normal;
   margin-right:10px;
   content: "\e900";
   }
-.review{text-align: center;font-size: 1.5em;}
+.review{text-align: center;font-size: 1.5em;display: block;}
 label:before {
   font-family: icomoon;
   font-weight: normal;
@@ -320,6 +385,7 @@ color:gray;}
 
     .platillos{max-width:45%;
      }
+     .info>div>div{width:250px;}
 .button{font-size: 1em;}
   #logo{font-size: 9em;}
 .titulos{font-size: 5em;}

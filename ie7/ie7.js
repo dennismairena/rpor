@@ -18,8 +18,12 @@
 		'icon-yelp': '&#xe900;',
 		'icon-instagram': '&#xe902;',
 		'icon-facebook': '&#xe903;',
+		'icon-envelope': '&#xe906;',
+		'icon-down': '&#xe905;',
 		'icon-bebida': '&#xe544;',
+		'icon-phone': '&#xe942;',
 		'icon-comida': '&#xe9a3;',
+		'icon-facebook1': '&#xea90;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),

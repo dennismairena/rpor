@@ -1,0 +1,87 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6umrd7');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6umrd7#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?6umrd7') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?6umrd7') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?6umrd7##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-appetizers {
+  &:before {
+    content: $icon-appetizers; 
+  }
+}
+.icon-postre {
+  &:before {
+    content: $icon-postre; 
+  }
+}
+.icon-yelp {
+  &:before {
+    content: $icon-yelp;     
+    color: #d32323;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;     
+    color: #e4405f;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;     
+    color: #3b5998;
+  }
+}
+.icon-envelope {
+  &:before {
+    content: $icon-envelope; 
+  }
+}
+.icon-down {
+  &:before {
+    content: $icon-down; 
+  }
+}
+.icon-bebida {
+  &:before {
+    content: $icon-bebida; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-comida {
+  &:before {
+    content: $icon-comida; 
+  }
+}
+.icon-facebook1 {
+  &:before {
+    content: $icon-facebook1; 
+  }
+}
+
