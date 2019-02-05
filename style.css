@@ -53,7 +53,7 @@ article {
 }
 
 .student .photo {
-  background-image: url("https://s3-media2.fl.yelpcdn.com/photo/nnQFWEA4T4bib3f0MwID0Q/90s.jpg");
+ 
   background-color: #ccc;
   border-radius: 100px;
   width: 60px;
@@ -101,7 +101,7 @@ article {
 header{
 
       min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0,1), transparent), url(https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/36176761_778118422381877_1571448690164367360_n.jpg?_nc_cat=104&_nc_ht=scontent-lax3-1.xx&oh=30e510ca0570ff519a8d6ea8bebe9f97&oe=5CAA3D01) no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0,1), transparent), url(back.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -152,11 +152,12 @@ padding: 5px 22px;
   color: darkgray;
   
 }
-.up{text-align: center;}
+.up{text-align: center;
+margin-bottom: 0;}
 .up>a{background:white;
 padding:.7em;
 position: relative;
-top:.6em;
+top:.1em;
 border-radius: 2em;
 color:gray;
 font-size: 1.2em;}
