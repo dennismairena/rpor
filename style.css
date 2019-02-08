@@ -27,7 +27,12 @@ article {
   color:rgba(0,0,0,0.6);
 }
 
-
+#about>p>a{margin:.3em;padding:.5em;background-color: gray;border-radius: 1em;color:white;}
+#about>p>a:hover{background-color:black;
+  border: none;
+  color: gray;}
+#about>p{position: relative;top:.5em;}
+.es{display:none;}
 .quote {
   background:white;
   padding: 15px 20px 5px 15px;
