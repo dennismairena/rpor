@@ -27,11 +27,14 @@ article {
   color:rgba(0,0,0,0.6);
 }
 
-#about>p>a{margin:.3em;padding:.5em;background-color: gray;border-radius: 1em;color:white;}
-#about>p>a:hover{background-color:black;
+header>p>a{margin:.3em;padding:.5em;background-color: darkgray;border-radius: 1em;color:white;}
+header>p>a:hover{background-color:gray;
   border: none;
-  color: gray;}
-#about>p{position: relative;top:.5em;}
+  color:black;}
+header>p{top:.5em;color:gray;
+z-index: 100000;
+position: -webkit-sticky;
+  position: sticky;}
 .es{display:none;}
 .quote {
   background:white;
