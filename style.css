@@ -35,7 +35,7 @@ header>p{top:.5em;color:gray;
 z-index: 100000;
 position: -webkit-sticky;
   position: sticky;}
-.es{display:none;}
+.en{display:none;}
 .quote {
   background:white;
   padding: 15px 20px 5px 15px;
